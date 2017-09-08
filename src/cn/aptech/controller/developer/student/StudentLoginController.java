@@ -1,4 +1,4 @@
-    package cn.aptech.controller.developer.student;
+package cn.aptech.controller.developer.student;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +22,11 @@ public class StudentLoginController {
 
 	@Resource
 	private StudentService studentService;
-
+	
+	/**
+	 * 页面跳转
+	 * @return
+	 */
 	@RequestMapping(value = "/login")
 	public String login() {
 		logger.debug("StudentLoginController welcome Aptech develpor==================");
