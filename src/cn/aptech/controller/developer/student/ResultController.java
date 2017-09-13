@@ -18,22 +18,22 @@ public class ResultController {
 	 * @param userCode
 	 * @return
 	 */
-	@RequestMapping(value = "/ucexist.json")
-	@ResponseBody
-	public Object userCodeIsExit(@RequestParam String userCode) {
-		logger.debug("userCodeIsExit userCode===================== " + userCode);
-		HashMap<String, String> resultMap = new HashMap<String, String>();
-		if (StringUtils.isNullOrEmpty(userCode)) {
-			resultMap.put("userCode", "null");
-		} else {
-			User user = userService.selectUserCodeExist(userCode);
-			if (null != user)
-				resultMap.put("userCode", "exist");
-			else
-				resultMap.put("userCode", "noexist");
-		}
-		// System.out.println("@###############################(" +
-		// JSONArray.toJSONString(resultMap) + ")##");
-		return JSONArray.toJSONString(resultMap);
-	}
+//	@RequestMapping(value = "/ucexist.json")
+//	@ResponseBody
+//	public Object userCodeIsExit(@RequestParam String userCode) {
+//		logger.debug("userCodeIsExit userCode===================== " + userCode);
+//		HashMap<String, String> resultMap = new HashMap<String, String>();
+//		if (StringUtils.isNullOrEmpty(userCode)) {
+//			resultMap.put("userCode", "null");
+//		} else {
+//			User user = userService.selectUserCodeExist(userCode);
+//			if (null != user)
+//				resultMap.put("userCode", "exist");
+//			else
+//				resultMap.put("userCode", "noexist");
+//		}
+//		// System.out.println("@###############################(" +
+//		// JSONArray.toJSONString(resultMap) + ")##");
+//		return JSONArray.toJSONString(resultMap);
+//	}
 }

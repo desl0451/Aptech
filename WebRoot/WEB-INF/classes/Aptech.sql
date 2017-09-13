@@ -1,6 +1,6 @@
 /*
 SQLyog 企业版 - MySQL GUI v8.14 
-MySQL - 5.7.15-log : Database - aptech
+MySQL - 5.7.17-log : Database - aptech
 *********************************************************************
 */
 
@@ -44,6 +44,38 @@ CREATE TABLE `classes` (
 /*Data for the table `classes` */
 
 insert  into `classes`(`classId`,`className`) values (1,'脱产1班'),(2,'脱产3班'),(3,'脱产6班'),(4,'脱产7班'),(5,'脱产32班');
+
+/*Table structure for table `grade` */
+
+DROP TABLE IF EXISTS `grade`;
+
+CREATE TABLE `grade` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '年级id',
+  `gradeid` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '年级名称',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `grade` */
+
+insert  into `grade`(`id`,`gradeid`) values (1,'第一学期'),(2,'第二学期'),(3,'第二学年');
+
+/*Table structure for table `result` */
+
+DROP TABLE IF EXISTS `result`;
+
+CREATE TABLE `result` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `studentno` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '学号',
+  `subjectid` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '科目',
+  `studentresult` int(11) DEFAULT NULL COMMENT '成绩',
+  `gradeid` int(11) DEFAULT NULL COMMENT '年级id',
+  `typeid` int(11) DEFAULT NULL COMMENT '类型id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `result` */
+
+insert  into `result`(`id`,`studentno`,`subjectid`,`studentresult`,`gradeid`,`typeid`) values (1,'1','1',78,1,1),(2,'1','1',88,1,1),(3,'1','1',69,1,1);
 
 /*Table structure for table `student` */
 
