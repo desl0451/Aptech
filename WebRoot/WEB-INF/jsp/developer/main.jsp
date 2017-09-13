@@ -58,7 +58,7 @@
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
-            <%@include file="/WEB-INF/jsp/developer/common/footerbuttons.jsp"%>
+            <%@include file="/WEB-INF/jsp/developer/common/footer.jsp"%>
             <!-- /menu footer buttons -->
           </div>
         </div>

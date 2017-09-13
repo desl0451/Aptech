@@ -10,7 +10,7 @@
     <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
   </a>
   <a data-toggle="tooltip" data-placement="top" title="Logout">
-    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-off" aria-hidden="true" onclick="logout()"></span>
   </a>
 </div>
 <script>
@@ -33,5 +33,8 @@ function toggleFullScreen() {
             document.webkitCancelFullScreen();  
         }  
     }  
-}  
+}
+function logout(){
+	location.href="${pageContext.request.contextPath}/stu/logout";
+}
 </script>

@@ -21,7 +21,7 @@
               </a>
             </li>
             <li><a href="javascript:;">帮助</a></li>
-            <li><a href="${pageContext.request.contextPath }/stu/logout"><i class="fa fa-sign-out pull-right"></i>注销</a></li>
+            <li><a href="${pageContext.request.contextPath}/stu/logout"><i class="fa fa-sign-out pull-right"></i>注销</a></li>
           </ul>
         </li>
 
